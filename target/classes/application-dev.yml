@@ -1,0 +1,13 @@
+server:
+  port: 5000
+
+spring:
+  application:
+    name: spring-boot-api-talk-to-db-service
+
+  batch.job.enabled: false
+  datasource:
+    url: jdbc:postgresql://${RDS_HOSTNAME}:${RDS_PORT}/${RDS_DB_NAME}
+    username: ${RDS_USERNAME}
+    password: ${RDS_PASSWORD}
+    driver-class-name: org.postgresql.Driver
