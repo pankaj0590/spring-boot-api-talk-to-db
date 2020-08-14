@@ -3,8 +3,8 @@ version: 0.2
 phases:
   install:
 
-    runtime-versions:
-      java: openjdk8
+     runtime-versions:
+      java: corretto8
 
     commands:
       - echo install
@@ -32,5 +32,5 @@ phases:
 artifacts:
   files:
     - target/spring-boot-api-talk-to-db-0.0.1-SNAPSHOT.jar
-  
+
 
