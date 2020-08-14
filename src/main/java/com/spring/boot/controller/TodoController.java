@@ -20,7 +20,7 @@ public class TodoController {
         @GetMapping(value = "/ping")
         public ResponseEntity getMessage(){
 
-                return new ResponseEntity("Pinging..", HttpStatus.OK);
+                return new ResponseEntity("Pinging.. service", HttpStatus.OK);
 
         }
 
