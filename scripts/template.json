@@ -1,0 +1,35 @@
+{
+    "family": "spring-boot-api-talk-to-db",
+    "placementConstraints": [],
+    "volumes": [],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "containerDefinitions": [
+        {
+            "memoryReservation": 128,
+            "name": "spring-boot-api-talk-to-db",
+            "mountPoints": [],
+            "image": "757681645441.dkr.ecr.us-east-1.amazonaws.com/dev-spring-boot-api-talk-to-db:latest",
+            "essential": true,
+            "portMappings": [
+                {
+                    "protocol": "tcp",
+                    "containerPort": 5000,
+                    "hostPort": 5000
+                }
+            ],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "test",
+                    "awslogs-group": "/ecs/spring-boot-api-talk-to-db"
+                }
+            },
+            "memory": 1024,
+            "cpu": 0,
+            "volumesFrom": []
+        }
+    ]
+}
